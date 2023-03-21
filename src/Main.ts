@@ -1,16 +1,16 @@
-import Test from "./test/Test";
+import Logger from "./loggers/Logger";
 
 export default class Main {
 
-    private readonly test: Test;
+    private readonly logger: Logger;
 
     constructor() {
-        this.test = new Test();
+        this.logger = new Logger();
     }
 
     public main(): void {
-        this.getTest().log("Hello Template TS !");
+        this.getLogger().info("The script is started !");
     }
 
-    private getTest(): Test {return this.test;}
+    public getLogger(): Logger {return this.logger;}
 }
