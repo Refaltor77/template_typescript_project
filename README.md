@@ -1,4 +1,4 @@
-#<center>🌍 Template typescript 🌍</center>
+# <center>🌍 Template typescript 🌍</center>
 
 ### Installation 🖇️
 ````
