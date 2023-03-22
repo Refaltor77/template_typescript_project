@@ -4,6 +4,7 @@
 ````
 git clone https://github.com/Refaltor77/template_typescript_project
 cd template_typescript_project
+rename `.envTEMPLATE` -> `.env`
 npm install
 ````
 
