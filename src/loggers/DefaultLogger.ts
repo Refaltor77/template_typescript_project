@@ -1,4 +1,4 @@
-export default class Logger {
+export default class DefaultLogger {
 
     // colors
     private reset: string = "\x1b[0m";
@@ -35,8 +35,10 @@ export default class Logger {
     }
 
     public debug(message: string): void {
-        const now = new Date();
-        const timestamp = `${now.toLocaleTimeString()}`;
-        console.log(this.reset + this.bold +  `[`+this.cyan+`${timestamp}`+this.reset+`] [`+ this.cyan +`DEBUG`+ this.reset + `] `+ this.cyan +`${message}` + this.reset);
+        if (process.env.MODE === "DEV") {
+            const now = new Date();
+            const timestamp = `${now.toLocaleTimeString()}`;
+            console.log(this.reset + this.bold +  `[`+this.cyan+`${timestamp}`+this.reset+`] [`+ this.cyan +`DEBUG`+ this.reset + `] `+ this.cyan +`${message}` + this.reset);
+        }
     }
 }
